@@ -172,17 +172,30 @@ public class JavaBasics {
             }
             System.out.println();
         }
+    return;
     }
     // 01 triangle
     public static void binTri(int n){
-        for(int i=)
+        for(int i=1 ; i<=n;i++){
+            for(int j = 1; j<=i;j++){
+                int count=i+j;
+                if(count%2==0){
+                    System.out.print(1);
+                }else
+                {System.out.print(0);}
+            }
+            System.out.println();
+        }
     }
     public static void main (String[] args) {
         // Scanner sc =new Scanner(System.in);
         // int n1 = sc.nextInt();
         // double n2 = sc.nextDouble();
         // double n3 = sc.nextDouble();
-        floidsTriangle(4);
+        
+        binTri(5);
+        
+        // floidsTriangle(4);
         // inv_half_py_num(5);
         // inhpyramid(5);
         
