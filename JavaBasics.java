@@ -187,13 +187,46 @@ public class JavaBasics {
             System.out.println();
         }
     }
+    // butterfly pattern
+
+                                //patterns
+    public static void butterpattern(int n, int i){
+        //stars
+        for(int j=1;j<=i;j++){
+            System.out.print("*");
+        }
+        //spaces
+        for(int j=1; j<=2*(n-i);j++){
+            System.out.print(" ");
+        }
+        //stars
+        for(int j=1;j<=i;j++){
+            System.out.print("*");
+        }
+    return;
+    }
+                                // both halfs
+    public static void butterfly(int n){
+        //1st half
+        for(int i=1;i<=n;i++){
+            butterpattern(n, i);;
+            System.out.println();
+        }
+        //2nd half
+        for(int i=n; i>=1;i--){
+            butterpattern(n, i);
+            System.out.println();
+        }
+    return;
+    }
     public static void main (String[] args) {
         // Scanner sc =new Scanner(System.in);
         // int n1 = sc.nextInt();
         // double n2 = sc.nextDouble();
         // double n3 = sc.nextDouble();
         
-        binTri(5);
+        butterfly(5);
+        //binTri(5);
         
         // floidsTriangle(4);
         // inv_half_py_num(5);
