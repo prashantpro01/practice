@@ -219,13 +219,27 @@ public class JavaBasics {
         }
     return;
     }
+
+    //solid rohmbus pattern
+    public static void solid_rohmbus(int n){
+        for(int i=1;i<=n;i++){
+            for(int j=1;j<=n-i+1;j++){
+                System.out.print(" ");
+            }
+            for(int j=1;j<=n;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
     public static void main (String[] args) {
         // Scanner sc =new Scanner(System.in);
         // int n1 = sc.nextInt();
         // double n2 = sc.nextDouble();
         // double n3 = sc.nextDouble();
         
-        butterfly(5);
+        solid_rohmbus(5);
+        //butterfly(5);
         //binTri(5);
         
         // floidsTriangle(4);
