@@ -296,13 +296,33 @@ public class JavaBasics {
             System.out.println();
         }
     } 
+
+    //palindromic pattern
+
+    public static void palindromic_pattern(int n){
+        for(int i=1;i<=n;i++){
+            //space
+            for(int j=1;j<=n-i;j++){
+                System.out.print(" ");
+            }
+            //pattern
+            for(int j=i;j>=1;j--){
+                System.out.print(j);
+            }
+            for(int j=1;j<=i-1;j++){
+                System.out.print(j+1);
+            }
+            System.out.println();
+        }
+    }
     public static void main (String[] args) {
         // Scanner sc =new Scanner(System.in);
         // int n1 = sc.nextInt();
         // double n2 = sc.nextDouble();
         // double n3 = sc.nextDouble();
         
-        number_pyramid(5);
+        palindromic_pattern(5);
+        //number_pyramid(5);
         //diamond(4);
         //hollow_rohmbus(5);
         //solid_rohmbus(5);
