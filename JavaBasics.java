@@ -275,14 +275,35 @@ public class JavaBasics {
         for(int i=n;i>=1;i--){
             diamond_pattern(i, n);
         } 
+    return;
     }
+
+    // number pyramid
+    public static void number_pyramid(int n){
+        for(int i=1;i<=n;i++){
+            //spaces
+            for(int j=1; j<=n-i;j++){
+                System.out.print(" ");
+            }
+            //stars
+            for (int j=1; j<=2*i-1;j++){
+                if(j%2==0){
+                    System.out.print(" ");
+                }else{
+                    System.out.print(i);
+                }
+            }
+            System.out.println();
+        }
+    } 
     public static void main (String[] args) {
         // Scanner sc =new Scanner(System.in);
         // int n1 = sc.nextInt();
         // double n2 = sc.nextDouble();
         // double n3 = sc.nextDouble();
         
-        diamond(4);
+        number_pyramid(5);
+        //diamond(4);
         //hollow_rohmbus(5);
         //solid_rohmbus(5);
         //butterfly(5);
