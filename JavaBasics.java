@@ -253,13 +253,37 @@ public class JavaBasics {
         }
         return;
     }
+
+    // diamond
+
+                            //pattern logic
+    public static void diamond_pattern(int i ,int n){
+        for(int j=1;j<=n-i;j++){
+            System.out.print(" ");
+        }
+        for(int j=1; j<=2*i-1;j++){
+            System.out.print("*");
+        }
+        System.out.println();
+    }
+    public static void diamond(int n){
+        //1st half
+        for(int i=1;i<=n;i++){
+            diamond_pattern(i, n);
+         }
+        // 2nd half
+        for(int i=n;i>=1;i--){
+            diamond_pattern(i, n);
+        } 
+    }
     public static void main (String[] args) {
         // Scanner sc =new Scanner(System.in);
         // int n1 = sc.nextInt();
         // double n2 = sc.nextDouble();
         // double n3 = sc.nextDouble();
         
-        hollow_rohmbus(5);
+        diamond(4);
+        //hollow_rohmbus(5);
         //solid_rohmbus(5);
         //butterfly(5);
         //binTri(5);
