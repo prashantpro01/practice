@@ -205,7 +205,7 @@ public class JavaBasics {
         }
     return;
     }
-                                // both halfs
+                           // both halfs
     public static void butterfly(int n){
         //1st half
         for(int i=1;i<=n;i++){
@@ -309,8 +309,8 @@ public class JavaBasics {
             for(int j=i;j>=1;j--){
                 System.out.print(j);
             }
-            for(int j=1;j<=i-1;j++){
-                System.out.print(j+1);
+            for(int j=2;j<=i;j++){
+                System.out.print(j);
             }
             System.out.println();
         }
