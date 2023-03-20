@@ -79,12 +79,56 @@ public class ArrayJava {
         }
     }
 
-    public static void main(String args[] ){
-        
-        //pairs in an array
+    public static void print_subarrays(int numbers[]){
+            for (int i =0;i <numbers.length ;i++){
+                for (int j=i+1; j<numbers.length;j++){
+                    for(int k=i;k<=j;k++ ){
+                        System.out.print(numbers[k]+" ");                        
+                    }
+                    System.out.println();
+                }
+                System.out.println();
+            }
+    } 
 
-        int numbers[]={2,4,5,1,8,10,15,16,17,3};
-        pairs_in_array(numbers);
+    public static void max_subarray_sum(int numbers[]){
+        int largest = Integer.MIN_VALUE;
+        int sum = 0;
+        int prefix[]=new int[numbers.length];
+        prefix[0]=numbers[0];
+        //CALCULATE PREFIX
+        for(int i=1;i<prefix.length;i++){
+            prefix[i]=prefix[i-1]+numbers[i];
+        }
+        
+        for (int i=0;i<numbers.length;i++){
+            for(int j =i;j<numbers.length;j++){
+                sum = 0;
+                // for(int k=i;k<=j;k++){
+                //     sum = sum+numbers[k];
+                //     }
+                sum = i==0?prefix[0]:prefix[j]-prefix[i-1];
+                System.out.println(sum);
+                if(sum>largest){
+                    largest = sum;
+                }
+            }
+            }
+            System.out.println("max sub array sum is" + largest);
+        }
+
+    public static void main(String args[] ){
+        int numbers[]={2,4,6,8,10};
+        
+        //max subarray sum
+        max_subarray_sum(numbers);
+        //print subarrays
+
+        // print_subarrays(numbers);
+                
+        //pairs in an array
+        
+        // pairs_in_array(numbers);
         
         // //reverse an array
 
