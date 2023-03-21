@@ -139,7 +139,7 @@ public class ArrayJava {
             }
             ms= Math.max(crr, ms);
         }
-        if(ms!=0){                      //extra case for -ve array case.
+        if(ms!=0){                 //extra case for -ve array case.
             System.out.println("max sub array sum"+ms);}
             else{
                 kadanAlgoException(numbers);  //exception calling.
@@ -147,7 +147,7 @@ public class ArrayJava {
     }
 
     public static void main(String args[] ){
-        int numbers[]={-2,-3,-4,-8,-2,-1,-5,-3};
+        int numbers[]={-2,-3,-4,8,-2,-1,-5,-3};
         //kadans
         kadanAlgo(numbers);
         //max subarray sum
