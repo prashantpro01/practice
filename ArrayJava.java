@@ -108,7 +108,6 @@ public class ArrayJava {
                 //     sum = sum+numbers[k];
                 //     }
                 sum = i==0?prefix[0]:prefix[j]-prefix[i-1];
-                System.out.println(sum);
                 if(sum>largest){
                     largest = sum;
                 }
@@ -116,12 +115,43 @@ public class ArrayJava {
             }
             System.out.println("max sub array sum is" + largest);
         }
+                            //kadan exception handling
+    public static void kadanAlgoException(int numbers[]){
+        int counter = 0 ;
+        for(int i=0; i<numbers.length;i++){
+            if(numbers[i]<0){
+                counter++;
+                if(counter==numbers.length){
+                    max_subarray_sum(numbers);
+                    return;
+                }
+            }
+        }
+    }
+                                //khadan algo
+    public static void kadanAlgo(int numbers[]){
+        int ms = Integer.MIN_VALUE;
+        int crr = 0;
+        for(int i=0; i<numbers.length;i++){
+            crr = crr+numbers[i];
+            if(crr<0){
+                crr=0;
+            }
+            ms= Math.max(crr, ms);
+        }
+        if(ms!=0){                      //extra case for -ve array case.
+            System.out.println("max sub array sum"+ms);}
+            else{
+                kadanAlgoException(numbers);  //exception calling.
+            }
+    }
 
     public static void main(String args[] ){
-        int numbers[]={2,4,6,8,10};
-        
+        int numbers[]={-2,-3,-4,-8,-2,-1,-5,-3};
+        //kadans
+        kadanAlgo(numbers);
         //max subarray sum
-        max_subarray_sum(numbers);
+        // max_subarray_sum(numbers);
         //print subarrays
 
         // print_subarrays(numbers);
