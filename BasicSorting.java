@@ -1,3 +1,4 @@
+import java.lang.reflect.Array;
 import java.util.*;
 
 public class BasicSorting {
@@ -50,7 +51,14 @@ public static void selectionSort(int arr[]){
     }
     public static void main(String args[]){
         int arr[]={5,4,1,3,2}; 
-        insertionSort(arr);
+        
+        Arrays.sort(arr,Collection.reverseOrder());//only works on object example (Integer) 
+
+        //Arrays.sort(arr, 0, 3);
+
+        // Arrays.sort(arr);
+        
+        // insertionSort(arr);
         
         //selectionSort(arr);
     
