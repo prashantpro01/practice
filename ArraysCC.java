@@ -3,7 +3,7 @@ public class ArraysCC {
     
     //traped rain water
     
-    public static int trappedRainWater(int height[]){
+    public static int trappedRainWater(int height[]){//O(n)
         int n = height.length;
         //calculate left mox boundary
         int leftMax[]=new int[n];
