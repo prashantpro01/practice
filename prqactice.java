@@ -205,7 +205,6 @@ public class prqactice {
             System.out.print("*");
         }
         
-        
        
         
     }
