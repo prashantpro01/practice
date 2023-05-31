@@ -208,12 +208,99 @@ public class prqactice {
        
         
     }
+    public static void q1D2(int n){
+        for(int i=1;i<=n;i++){
+            for(int j=1;j<=i;j++){
+                System.out.print(j);
+            }
+            System.out.println( );
+        }
+    }
+    public static void q2D2(int n){
+        for(int i=1;i<=n;i++){
+            for(int j=1;j<=n;j++){
+                if(j<=i){
+                    System.out.print(i);
+                }else{
+                    System.out.print(j);
+                }
+            }
+            System.out.println( );
+        }
+    }
+    public static void q3D2(int n){
+        for(int i=1;i<=n;i++){
+            for(int j=1;j<=i;j++){
+                System.out.print(j*j+" ");
+            }
+            System.out.println( );
+        }
+    }  
+    
+    public static void q4D2(int n){
+        int k=1;
+        for(int i=1;i<=n;i++){
+            for(int j=1;j<=i;j++){
+                System.out.print(k+" ");
+                k++;
+                if(k>n){
+                    System.exit(0);;
+                }
+            }
+            System.out.println( );
+        }
+    }
+
+    public static void q5D2(int n){
+        if(n%2==0){
+            System.out.println("sorry cant execute please input odd number");
+        }else{
+            n=(n+1)/2;
+        
+            for(int i=1;i<n;i++){
+                for(int j=1;j<i;j++){
+                    System.out.print("  ");
+                }
+                for(int j=n-i;j>=0;j--){
+                    System.out.print(j+" ");
+                 }
+                for(int j=1;j<=n-i;j++){
+                    System.out.print(j+" ");
+                 }
+                System.out.println();
+            }
+            for(int i=n;i>=1;i--){
+                for(int j=1;j<i;j++){
+                    System.out.print("  ");
+                }
+                for(int j=n-i;j>=0;j--){
+                    System.out.print(j+" ");
+                 }
+                for(int j=1;j<=n-i;j++){
+                    System.out.print(j+" ");
+                 }
+                System.out.println();
+            } 
+        }
+         
+    }
+
+    public static void q6D2(int n){
+        
+    }
+
 
     public static void main(String args[]){
         Scanner sc=new Scanner(System.in);
         System.out.println("enter the number");
         int n = sc.nextInt();
         // rohmbus(n);
-        hollodiamond(n);
+        // hollodiamond(n);
+        // q1D2(n);
+        // q2D2(n);
+        //  q3D2(n);
+    //    q4D2(n);
+    q5D2(n);
+
     }
 }
