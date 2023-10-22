@@ -421,10 +421,27 @@ public class prqactice {
         }
     }
 
-    public static void main(String args[]) {
+    public static void q1D4(int r) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("enter the number");
-        int n = sc.nextInt();
+        System.out.println("enter string");
+        String str = sc.nextLine();
+        int count = 1;
+        for (int i = 1; i < str.length(); i++) {
+            // System.out.print(str.charAt(i));
+            if (str.charAt(i) == str.charAt(i - 1)) {
+                count++;
+            } else {
+                System.out.println(str.charAt(i));
+                count = 1;
+            }
+
+        }
+    }
+
+    public static void main(String args[]) {
+        // Scanner sc = new Scanner(System.in);
+        // System.out.println("enter the number");
+        // int n = sc.nextInt();
         // rohmbus(n);
         // hollodiamond(n);
         // q1D2(n);
@@ -436,7 +453,8 @@ public class prqactice {
         // q2D3(n);
         // q3D3(n);
         // q4D3(n);
-        q5D3(n);
+        // q5D3(n);
+        q1D4(100);
 
     }
 }
