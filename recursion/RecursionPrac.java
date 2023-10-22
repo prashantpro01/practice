@@ -36,10 +36,18 @@ public class RecursionPrac {
         return sum;
     }
 
+    public static int fib(int n){
+        if(n==0||n==1){
+            return n;
+        }
+        int fnm1=fib(n-1);
+        int fnm2=fib(n-2);
+        return fnm1+fnm2;
+    }
     public static void main(String[] args) {
-        // printDec(10);
-        // printInc(5);
-        System.out.print(sumNatural(5));
-
+        //  printDec(10);
+        //  printInc(5);
+        System.out.print(fib(10));
+        
     }
 }
