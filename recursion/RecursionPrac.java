@@ -74,14 +74,42 @@ public class RecursionPrac {
         }
     }
 
+    public static int pairingProblem(int n) {
+        if (n == 1 || n == 2) {
+            return n;
+        }
+        // chose
+        // single
+        int fnm1 = pairingProblem(n - 1);
+        // pair
+        int fnm2 = pairingProblem(n - 2);
+        int pairWays = (n - 1) * fnm2;
+        // total ways
+        return fnm1 + pairWays;
+    }
+
+    public static void printBinaryWithoutConsicutive(int n, int lastPlace, String str) {
+        // base case
+        if (n == 0) {
+            System.out.println(str);
+            return;
+        }
+        // condition
+        printBinaryWithoutConsicutive(n - 1, 0, str + "0");
+        if (lastPlace == 0) {
+            printBinaryWithoutConsicutive(n - 1, 1, str + "1");
+        }
+    }
+
     public static void main(String[] args) {
         // printDec(10);
         // printInc(5);
         // System.out.print(fib(10));
         // System.out.println(tilingProb(5));
-        String str = "aaabbccffggddjjkklleerrmmnnbbkkiiyyjj";
-        removeDuplicate(str, 0, new StringBuilder(""), new boolean[26]);
-        
-        
+        // String str = "aaabbccffggddjjkklleerrmmnnbbkkiiyyjj";
+        // removeDuplicate(str, 0, new StringBuilder(""), new boolean[26]);
+        // System.out.println(pairingProblem(3));
+        printBinaryWithoutConsicutive(3, 0, "");
+
     }
 }
