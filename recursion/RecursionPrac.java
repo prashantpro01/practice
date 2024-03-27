@@ -101,6 +101,18 @@ public class RecursionPrac {
         }
     }
 
+    public static void q1(int arr[], int key, int n) {
+        // base case
+        if (n == arr.length) {
+            return;
+        }
+        // condition
+        if (arr[n] == key) {
+            System.out.print(n + " ");
+        }
+        q1(arr, key, n + 1);
+    }
+
     public static void main(String[] args) {
         // printDec(10);
         // printInc(5);
@@ -109,7 +121,8 @@ public class RecursionPrac {
         // String str = "aaabbccffggddjjkklleerrmmnnbbkkiiyyjj";
         // removeDuplicate(str, 0, new StringBuilder(""), new boolean[26]);
         // System.out.println(pairingProblem(3));
-        printBinaryWithoutConsicutive(3, 0, "");
-
+        // printBinaryWithoutConsicutive(3, 0, "");
+        int arr[] = { 3, 4, 5, 6, 1, 8, 2, 3, 2, 1, 2, 5, 2, 3, 2, };
+        q1(arr, 2, 0);
     }
 }
