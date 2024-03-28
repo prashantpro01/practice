@@ -113,6 +113,24 @@ public class RecursionPrac {
         q1(arr, key, n + 1);
     }
 
+    static String digits[] = { "zreo", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
+
+    public static void q2(int number) {
+        // base
+        if (number == 0) {
+            return;
+        }
+        // condition
+        int lastdigit = number % 10;
+        q2(number / 10);
+        System.out.print(digits[lastdigit] + " ");
+
+    }
+
+    public static void q3(String str){
+        
+    }
+
     public static void main(String[] args) {
         // printDec(10);
         // printInc(5);
@@ -122,7 +140,9 @@ public class RecursionPrac {
         // removeDuplicate(str, 0, new StringBuilder(""), new boolean[26]);
         // System.out.println(pairingProblem(3));
         // printBinaryWithoutConsicutive(3, 0, "");
-        int arr[] = { 3, 4, 5, 6, 1, 8, 2, 3, 2, 1, 2, 5, 2, 3, 2, };
-        q1(arr, 2, 0);
+        // int arr[] = { 3, 4, 5, 6, 1, 8, 2, 3, 2, 1, 2, 5, 2, 3, 2, };
+        // q1(arr, 2, 0);
+
+        q2(1947);
     }
 }
