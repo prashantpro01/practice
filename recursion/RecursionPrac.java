@@ -127,8 +127,17 @@ public class RecursionPrac {
 
     }
 
-    public static void q3(String str){
-        
+    public static int q3(String str) {
+        // base
+        if (str.length() == 0) {
+            return 0;
+        }
+        // condition
+        return q3(str.substring(1)) + 1;
+    }
+
+    public static int q4(String str,){
+    
     }
 
     public static void main(String[] args) {
@@ -143,6 +152,9 @@ public class RecursionPrac {
         // int arr[] = { 3, 4, 5, 6, 1, 8, 2, 3, 2, 1, 2, 5, 2, 3, 2, };
         // q1(arr, 2, 0);
 
-        q2(1947);
+        // q2(1947);
+        String str = "abdef";
+        System.out.println(q3(str));
+
     }
 }
