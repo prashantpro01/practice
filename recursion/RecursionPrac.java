@@ -136,8 +136,31 @@ public class RecursionPrac {
         return q3(str.substring(1)) + 1;
     }
 
-    public static int q4(String str,){
-    
+    public static int q4(String str, int i, int j, int n) {
+        // base case
+        if (n == 1) {
+            return 1;
+        }
+        if (n <= 0) {
+            return 0;
+        }
+
+        int res = q4(str, i + 1, j, n - 1) + q4(str, i, j - 1, n - 1) - q4(str, i + 1, j - 1, n - 2);
+        if (str.charAt(i) == str.charAt(j)) {
+            res++;
+        }
+        return res;
+
+    }
+
+    public static void towerOfHanoi(int n, String src, String helper, String dest) {
+        if (n == 1) {
+            System.out.println("transfer diak " + n + " from " + src + " to " + dest);
+            return;
+        }
+        towerOfHanoi(n - 1, src, dest, helper);
+        System.out.println("transfer diak " + n + " from " + src + " to " + dest);
+        towerOfHanoi(n - 1, helper, src, dest);
     }
 
     public static void main(String[] args) {
@@ -152,9 +175,12 @@ public class RecursionPrac {
         // int arr[] = { 3, 4, 5, 6, 1, 8, 2, 3, 2, 1, 2, 5, 2, 3, 2, };
         // q1(arr, 2, 0);
 
-        // q2(1947);
-        String str = "abdef";
-        System.out.println(q3(str));
+        // // q2(1947);
+        // String str = "abcab";
+        // System.out.println(q3(str));
+        // System.out.println(q4(str, 0, str.length() - 1, str.length()));
 
+        int n = 2;
+        towerOfHanoi(n, "S", "H", "D");
     }
 }
